@@ -1,10 +1,10 @@
 const express = require('express');
 const request = require('request-promise');
-
-
+const bodyParser = require('body-parser'); // Add this line to parse the request body
 const app = express();
 const PORT = process.env.PORT || 5000;
-const apiKey = '719fe24c1fcd3c9ea563faf322d2ca28';
+//use your own api, get it on scrapper Api, etc
+const apiKey = '********';
 const baseUrl = `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
 
 app.use(express.json());
